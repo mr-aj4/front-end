@@ -102,7 +102,7 @@ export class AppComponent implements OnInit {
                    message: 'Login successful. Now you can close and proceed further.',
                  });
                  this.isLoggedIn=true;
-                 this.GetClaims();
+                 //this.GetClaims();
                 
                 }
             )

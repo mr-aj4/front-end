@@ -9,12 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { AdminComponent } from './admin/admin.component';
 //mport { DatepickerAdapterComponent } from './datepicker-adapter/datepicker-adapter.component';
+import{MycartComponent} from './mycart/mycart.component';
+import { ProductDisplayComponent } from './productdisplay/productdisplay.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent//,
+    AdminComponent,
+    ProductDisplayComponent,MycartComponent,//,
    // DatepickerAdapterComponent
   ],
   imports: [
