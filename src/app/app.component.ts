@@ -89,13 +89,13 @@ export class AppComponent implements OnInit {
             },
             () => {
                 //This is Success part
-                console.log(this.globalResponse._body);
+                //console.log(this.globalResponse._body);
                 var token = this.globalResponse._body;
                 var decoded = jwt_decode(token); 
-                console.log(decoded);   
-                
+                console.log(decoded.role);  //prinitng role               
                 //console.log(decoded);
-                this.authService.storeToken(this.globalResponse.access_token);  
+                this.authService.storeToken(this.globalResponse._body);  
+                this.authService.storeRole(decoded.role);
                  this.alerts.push({
                    id: 1,
                    type: 'success',
