@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { AdminComponent } from './admin/admin.component';
 //mport { DatepickerAdapterComponent } from './datepicker-adapter/datepicker-adapter.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent//,
+    AppComponent,
+    AdminComponent//,
    // DatepickerAdapterComponent
   ],
   imports: [

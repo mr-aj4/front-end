@@ -14,7 +14,7 @@
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item active" *ngIf="!isLoggedIn">
-        <a class="nav-link navbar-text"  (click)="open(content)" href="#"><b>Login & Signup</b></a>
+        <a class="nav-link navbar-text"  (click)="open(content)" href="#"><b>Login/Signup</b></a>
       </li>
       <div class="btn-group mr-3" *ngIf="isLoggedIn">
         <button type="button" class="btn btn-primary"><b>User Details</b></button>
@@ -27,17 +27,17 @@
           </div>
         </div>
       </div>
-      <!-- <div class="btn-group mr-3">
-          <button type="button" class="btn btn-primary"><b>More</b></button>
+      <div class="btn-group mr-3">
+          <button type="button" class="btn btn-primary"><b></b></button>
           <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-            <button class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
+            <button class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle>More</button>
             <div class="dropdown-menu" ngbDropdownMenu>
-              <button class="dropdown-item">One</button>
-              <button class="dropdown-item">Two</button>
-              <button class="dropdown-item">Four!</button>
+              <button class="dropdown-item">Profile</button>
+              <button class="dropdown-item">option3</button>
+              <button class="dropdown-item">Logout</button>
             </div>
           </div>
-        </div> -->
+        </div>
       <li class="nav-item active">
           <!-- <a class="nav-link" href="#"><b>Cart</b></a> -->
           <button type="button" routerLink='/mycart' class="btn btn-primary">
