@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   
   <a class="navbar-brand" routerLink='/productdisplay'>
   <img src="./assets/images/logo1.png"></a>
@@ -16,7 +16,7 @@
       <li class="nav-item active" *ngIf="!isLoggedIn">
         <a class="nav-link navbar-text"  (click)="open(content)" href="#"><b>Login/Signup</b></a>
       </li>
-      <div class="btn-group mr-3" *ngIf="isLoggedIn">
+      <div class="btn-group mr-3" *ngIf="isLoggedIn ">
         <button type="button" class="btn btn-primary"><b>User Details</b></button>
         <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
           <button class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
@@ -28,9 +28,9 @@
         </div>
       </div>
       <div class="btn-group mr-3">
-          <button type="button" class="btn btn-primary"><b></b></button>
+          <!-- <button type="button" class="btn btn-primary bg-dark"><b></b></button> -->
           <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-            <button class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle>More</button>
+            <button class="btn btn-primary dropdown-toggle-split bg-dark" ngbDropdownToggle>More</button>
             <div class="dropdown-menu" ngbDropdownMenu>
               <button class="dropdown-item">Profile</button>
               <button class="dropdown-item">option3</button>
@@ -40,13 +40,13 @@
         </div>
       <li class="nav-item active">
           <!-- <a class="nav-link" href="#"><b>Cart</b></a> -->
-          <button type="button" routerLink='/mycart' class="btn btn-primary">
-            <b>Cart </b> <span class="badge badge-light">{{cartItemCount}}</span>
+          <button type="button" routerLink='/mycart' class="btn btn-primary bg-dark">
+            <b>Cart </b> <span class="badge badge-light bg-dark">{{cartItemCount}}</span>
             <span class="sr-only">unread messages</span>
           </button>
         </li>
         <li class="nav-item active">
-          <a routerLink='/admin' class="nav-link" href="#"><b>Admin</b></a>
+          <button type="button" routerLink='/admin' class="nav-link btn btn-primary bg-dark" href="#"><b>Admin</b></button>
         </li>
     </ul>
 

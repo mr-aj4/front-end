@@ -1,4 +1,30 @@
-<div id="collapseExample" [ngbCollapse]="false">
+<p>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+      Toggle
+    </button>
+  </p>
+<div id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div class="card">
+      <div class="card-body">
+       <h1>You are in admin page.You are in admin page.</h1> <h1>You are in admin page.</h1>
+       <h1>You are in admin page.</h1>
+       <h1>You are in admin page.</h1>
+       <h1>You are in admin page.</h1>
+       <h1>You are in admin page.</h1>
+       <h1>You are in admin page.</h1>
+       <h1>You are in admin page.</h1>
+       <h1>You are in admin page.</h1>
+      </div>
+    </div>
+  </div>
+  <p>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed2 = !isCollapsed2"
+            [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseExample">
+      Toggle
+    </button>
+  </p>
+<div id="collapseExample" [ngbCollapse]="isCollapsed2">
     <div class="card">
       <div class="card-body">
        <h1>You are in admin page.You are in admin page.</h1> <h1>You are in admin page.</h1>
