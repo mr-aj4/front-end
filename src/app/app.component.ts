@@ -5,7 +5,8 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { Registration } from './Models/User.Models';
 import {RegistrationService} from './Services/Registration.Service'
 import { AuthenticationService } from './Services/authentication.service';
-
+// import {JwtHelperService} from '@auth0/angular-jwt';
+import * as jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-root',
@@ -88,8 +89,12 @@ export class AppComponent implements OnInit {
             },
             () => {
                 //This is Success part
-               // console.log(this.globalResponse);
-               
+                console.log(this.globalResponse._body);
+                var token = this.globalResponse._body;
+                var decoded = jwt_decode(token); 
+                console.log(decoded);   
+                
+                //console.log(decoded);
                 this.authService.storeToken(this.globalResponse.access_token);  
                  this.alerts.push({
                    id: 1,
@@ -158,7 +163,7 @@ export class AppComponent implements OnInit {
             },
             () => {
                 //  This is Success part
-               // console.log(this.globalResponse );
+               console.log(this.globalResponse );
                 let a=this.globalResponse;
                 this.currentUser=this.globalResponse;
                 this.authService.storeRole(this.currentUser);
