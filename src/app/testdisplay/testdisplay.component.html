@@ -1,0 +1,33 @@
+<div class="col-md-6">
+    <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>productname</th>
+      <th>brand</th>
+        <th>ModelNumber</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Description</th>
+        <th>view</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of product">
+            <td>{{product.productName}}</td>
+            <td>{{product.brand}}</td>
+            <td>{{product.modelNumber}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.description}}</td>
+            <td><button type="button" class="btn btn-success" (click)="getNavigation('view', product.p_id)">View</button></td>
+            <td><button type="button" class="btn btn-warning" (click)="getNavigation('update', product.p_id)">Edit</button></td>
+            <td><button type="button" class="btn btn-danger">Delete</button></td>
+           
+            </tr>
+    </tbody>
+      </table>
+  
+    </div>
+ 

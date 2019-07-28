@@ -1,4 +1,4 @@
-export interface Product
+export class Product
 {
     productId:number;
     productname:string;

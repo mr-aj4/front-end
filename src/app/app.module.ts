@@ -16,6 +16,7 @@ import{PersonalComponent} from'./personal/personal.component';
 import{BussinessComponent} from'./bussiness/bussiness.component';
 import{GammingComponent} from'./gamming/gamming.component';
 import{UserComponent} from './user/user.component';
+import{TestdisplayComponent} from './testdisplay/testdisplay.component';
 
 
 
@@ -23,7 +24,7 @@ import{UserComponent} from './user/user.component';
   declarations: [
     AppComponent,
     AdminComponent,
-    ProductDisplayComponent,MycartComponent,RigsComponent,PersonalComponent,BussinessComponent,GammingComponent,UserComponent//,
+    ProductDisplayComponent,MycartComponent,RigsComponent,PersonalComponent,BussinessComponent,GammingComponent,UserComponent,TestdisplayComponent//,
    // DatepickerAdapterComponent
   ],
   imports: [
