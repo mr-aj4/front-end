@@ -18,16 +18,23 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
     this.inventoryForm = this.fb.group({
-     productName:  ['', Validators.compose([Validators.required])],
-      productBrand:['',Validators.compose([Validators.required])],
-      productPrice:['',Validators.compose([Validators.required])],
-     productQuantity:['',Validators.required],
+      productName:  ['', Validators.required],
+      brand:['',Validators.required],
+      modelNumber:['',Validators.required],
+      category:['',Validators.required],
+      price:['',Validators.required],
+      quantity:['',Validators.required],
+      description:['',Validators.required],
     });
 
   }
+
     AddInventory(){
-      this.inventoryInputs=this.inventoryForm.value;
+       this.inventoryInputs=this.inventoryForm.value;
+      // console.log(this.inventoryInputs);
+      // console.log(this.inventoryForm);
       console.log(this.inventoryInputs);
+
     }
   
 

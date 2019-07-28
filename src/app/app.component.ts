@@ -40,7 +40,6 @@ export class AppComponent implements OnInit {
       name:  ['', Validators.compose([Validators.required, Validators.minLength(3),Validators.maxLength(50)])],
       password:['',Validators.compose([Validators.required, Validators.minLength(3),Validators.maxLength(50)])],
       email:['',Validators.compose([Validators.required,Validators.email])],
-      //Role:['',Validators.required],
       mob:['',Validators.required],
       dob:[''],
     });
@@ -124,6 +123,7 @@ export class AppComponent implements OnInit {
     this.registrationInputs=this.registrationForm.value;
     this.registrationInputs['dob']=mydate;
     console.log(this.registrationInputs);
+    //console.log(this.loginForm.value);
         this.regService.RegisterUser(this.registrationInputs)
             .subscribe((result) => {
               this.globalResponse = result;              

@@ -1,6 +1,9 @@
 export interface Inventory{
-    productName:string;
+    name: string;
     brand:string;
-
-    
+    modelNumber:string;
+    category:string;
+    price:number;
+    quantity:number;
+    description:string;
 }
