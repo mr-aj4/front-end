@@ -14,7 +14,7 @@
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item active" *ngIf="!isLoggedIn">
-        <a class="nav-link navbar-text"  (click)="open(content)" href="#"><b>Login/Signup</b></a>
+        <a class="nav-link navbar-text"  (click)="open(content)" ><b>Login/Signup</b></a>
       </li>
       <div class="btn-group mr-3" *ngIf="isLoggedIn ">
         <button type="button" class="btn btn-primary"><b>User Details</b></button>
@@ -230,5 +230,6 @@
       </div>
 </div> -->
 
-<app-user></app-user>
+
+<div class='containermain'><app-user></app-user></div>
 
