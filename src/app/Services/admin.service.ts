@@ -9,7 +9,7 @@ import { map, filter, catchError, mergeMap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class RegistrationService {
+export class AdminService {
 
   public apiURL:string="http://localhost:8080/buildMyPc/Admin/addProduct";
   constructor(private http:Http) {this.http=http; }

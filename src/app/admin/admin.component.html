@@ -65,7 +65,7 @@
                   </div>
                   <div class="col-md-4">
                       
-                    <span style="font-weight: bold;color: red;" *ngIf="!registrationForm.controls['name'].valid&&registrationForm.controls['name'].dirty">
+                    <span style="font-weight: bold;color: red;" *ngIf="!registrationForm.controls['productName'].valid&&registrationForm.controls['productName'].dirty">
                       <span *ngIf="registrationForm.controls.productName.errors.required">Product Name is Required.</span>
                     </span>
                    
@@ -80,7 +80,7 @@
                     <input type="text" formControlName="productBrand" placeholder="Product Brand Name" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                   </div>
                   <div class="col-md-4">
-                      <span style="font-weight: bold;color: red;"  *ngIf="!registrationForm.controls['password'].valid&&registrationForm.controls['password'].dirty">
+                      <span style="font-weight: bold;color: red;"  *ngIf="!registrationForm.controls['productBrand'].valid&&registrationForm.controls['productBrand'].dirty">
                           <span *ngIf="registrationForm.controls.password.errors.required">Product Name is Required.</span>
                         </span>
                   </div>
@@ -94,7 +94,7 @@
                     <input type="number" formControlName="productPrice" placeholder="Price" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                   </div>
                   <div class="col-md-4">
-                      <span style="font-weight: bold;color: red;" *ngIf="!registrationForm.controls['email'].valid&&registrationForm.controls['email'].dirty">
+                      <span style="font-weight: bold;color: red;" *ngIf="!registrationForm.controls['productPrice'].valid&&registrationForm.controls['productPrice'].dirty">
                           <span *ngIf="registrationForm.controls.email.errors.required">Product Price is Required.</span>
                         </span>
                   </div>
@@ -127,7 +127,7 @@
                     <input type="number" formControlName="productQuantity" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Enter quantity">
                   </div>
                   <div class="col-md-4">
-                      <span style="font-weight: bold;color: red;" *ngIf="!registrationForm.controls['mob'].valid&&registrationForm.controls['mob'].dirty">
+                      <span style="font-weight: bold;color: red;" *ngIf="!registrationForm.controls['productQuantity'].valid&&registrationForm.controls['productQuantity'].dirty">
                           <span *ngIf="registrationForm.controls.productQuantity.errors.required">Enter Total Quantity</span>
                         </span>
                   </div>

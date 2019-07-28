@@ -1,23 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { AddProduct } from '../Services/admin.services';
-import { OrderService } from '../Services/order.service';
+import { AdminService } from '../Services/admin.service';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  styleUrls: ['./admin.component.scss'],
+  providers:[AdminService]
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  inventoryForm: FormGroup;
+
+  constructor(private fb:FormBuilder,private adminService:AdminService) { }
 
   ngOnInit() {
     this.inventoryForm = this.fb.group({
-      name:  ['', Validators.compose([Validators.required, Validators.minLength(3),Validators.maxLength(50)])],
-      password:['',Validators.compose([Validators.required, Validators.minLength(3),Validators.maxLength(50)])],
-      email:['',Validators.compose([Validators.required,Validators.email])],
-      //Role:['',Validators.required],
-      mob:['',Validators.required],
-      dob:[''],
+     productName:  ['', Validators.compose([Validators.required])],
+      productBrand:['',Validators.compose([Validators.required])],
+      productPrice:['',Validators.compose([Validators.required])],
+     productQuantity:['',Validators.required],
     });
   }
 
