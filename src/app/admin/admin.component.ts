@@ -13,6 +13,7 @@ export class AdminComponent implements OnInit {
 
   inventoryForm: FormGroup;
   inventoryInputs:Inventory[];
+  globalresponse:any;
 
   constructor(private fb:FormBuilder,private adminService:AdminService) { }
 
@@ -34,6 +35,12 @@ export class AdminComponent implements OnInit {
       // console.log(this.inventoryInputs);
       // console.log(this.inventoryForm);
       console.log(this.inventoryInputs);
+      this.adminService.AddProduct(this.inventoryInputs)
+          .subscribe((result)=>{
+            this.globalresponse=result;
+          },error =>{},
+          ()=>
+          {});
 
     }
   
