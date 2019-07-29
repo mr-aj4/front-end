@@ -28,14 +28,5 @@ export class RegistrationService {
     console.log(error);  
     return throwError(error);  
 } 
-public apiURL2:string="http://localhost:8080/buildMyPc/common/product";
-TestDisplay(category:any){
-  
-  const headers = new Headers({'Content-Type':'application/json'});
-   // const requestOptions= new RequestOptions({headers :headers});
-   let search = new URLSearchParams();
-   search.set("category",category);
-   return this.http.get(this.apiURL2+"/"+category);
-}
 
 }

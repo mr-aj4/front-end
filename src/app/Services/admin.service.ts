@@ -28,4 +28,12 @@ export class AdminService {
     console.log(error);  
     return throwError(error);  
 } 
+  
+public apiURL2:string="http://localhost:8080/buildMyPc/common/product";
+displayProduct(category:any){  
+  const headers = new Headers({'Content-Type':'application/json'});
+   let search = new URLSearchParams();
+   search.set("category",category);
+   return this.http.get(this.apiURL2+"/"+category);
+}
 }

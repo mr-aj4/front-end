@@ -8,7 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { AdminComponent } from './admin/admin.component';
-//mport { DatepickerAdapterComponent } from './datepicker-adapter/datepicker-adapter.component';
 import{MycartComponent} from './mycart/mycart.component';
 import { ProductDisplayComponent } from './productdisplay/productdisplay.component';
 import {RigsComponent} from './rigs/rigs.component';
@@ -16,7 +15,7 @@ import{PersonalComponent} from'./personal/personal.component';
 import{BussinessComponent} from'./bussiness/bussiness.component';
 import{GammingComponent} from'./gamming/gamming.component';
 import{UserComponent} from './user/user.component';
-import{TestdisplayComponent} from './testdisplay/testdisplay.component';
+
 
 
 
@@ -24,8 +23,7 @@ import{TestdisplayComponent} from './testdisplay/testdisplay.component';
   declarations: [
     AppComponent,
     AdminComponent,
-    ProductDisplayComponent,MycartComponent,RigsComponent,PersonalComponent,BussinessComponent,GammingComponent,UserComponent,TestdisplayComponent//,
-   // DatepickerAdapterComponent
+    ProductDisplayComponent,MycartComponent,RigsComponent,PersonalComponent,BussinessComponent,GammingComponent,UserComponent
   ],
   imports: [
     BrowserModule,NgbModule,FormsModule,ReactiveFormsModule,HttpClientModule,HttpModule,NgbModule,

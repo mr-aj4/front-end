@@ -5,7 +5,6 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { Registration } from './Models/User.Models';
 import {RegistrationService} from './Services/Registration.Service'
 import { AuthenticationService } from './Services/authentication.service';
-// import {JwtHelperService} from '@auth0/angular-jwt';
 import * as jwt_decode from 'jwt-decode';
 
 @Component({

@@ -40,9 +40,41 @@
   </div>
   </div> -->
   <ngb-tabset type="pills">
-    <ngb-tab title="Simple">
+    <ngb-tab title="Show Product">
       <ng-template ngbTabContent>
-        <p>topic 1</p>
+        <div class="col-md-6">
+          <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>productname</th>
+            <th>brand</th>
+              <th>ModelNumber</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Description</th>
+              <th>view</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let product of product">
+                  <td>{{product.productName}}</td>
+                  <td>{{product.brand}}</td>
+                  <td>{{product.modelNumber}}</td>
+                  <td>{{product.price}}</td>
+                  <td>{{product.quantity}}</td>
+                  <td>{{product.description}}</td>
+                  <td><button type="button" class="btn btn-success" (click)="getNavigation('view', product.p_id)">View</button></td>
+                  <td><button type="button" class="btn btn-warning" (click)="getNavigation('update', product.p_id)">Edit</button></td>
+                  <td><button type="button" class="btn btn-danger">Delete</button></td>
+                 
+                  </tr>
+          </tbody>
+            </table>
+        
+          </div>
+       
       </ng-template>
     </ngb-tab>
     <ngb-tab>
@@ -152,7 +184,7 @@
                     <label for="description" style="color: lightseagreen;font-size: medium;" ><b>Description:</b></label>
                   </div>
                   <div class="col-md-6">
-                    <input type="text" formControlName="description" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Enter quantity">
+                    <input type="text" formControlName="description" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Enter description">
                   </div>
                   <div class="col-md-4">
                       <span style="font-weight: bold;color: red;" *ngIf="!inventoryForm.controls['description'].valid&&inventoryForm.controls['description'].dirty">
